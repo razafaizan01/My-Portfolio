@@ -1,0 +1,38 @@
+*{box-sizing:border-box}body{margin:0;background:#e9edf3;color:#202a38;font:14px/1.55 Arial,Helvetica,sans-serif}.toolbar{max-width:900px;margin:22px auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}.toolbar a{color:#245b91;text-decoration:none}.toolbar button{background:#172d48;color:white;border:0;border-radius:5px;padding:10px 14px;font-weight:700;cursor:pointer}.resume{max-width:850px;margin:0 auto 40px;background:white;padding:48px 58px;box-shadow:0 12px 45px #172d4818}.resume-header{display:flex;justify-content:space-between;gap:25px;border-bottom:2px solid #213e5c;padding-bottom:18px;margin-bottom:22px}.resume h1{font-size:32px;letter-spacing:-1px;margin:0 0 5px;color:#142b45}.headline{margin:0;color:#386c92;font-weight:700}.contact{text-align:right;font-size:11px;color:#526174}.contact p{margin:2px 0}.resume section{margin:20px 0}.resume h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:#245b91;border-bottom:1px solid #d8e0e9;padding-bottom:6px;margin:0 0 10px}.resume p{margin:5px 0;font-size:12px}.entry{margin:12px 0}.entry-top{display:flex;justify-content:space-between;gap:15px;font-size:12px}.entry-top span{font-size:11px;color:#68778a;white-space:nowrap}.hint{color:#7b8796;font-size:10px!important;font-style:italic}.resume footer{border-top:1px solid #d8e0e9;padding-top:12px;margin-top:25px;color:#778497;font-size:10px}@media(max-width:650px){.resume{margin:0;padding:28px 22px}.resume-header{display:block}.contact{text-align:left;margin-top:15px}.entry-top{display:block}.toolbar{padding:0 14px}}@media print{@page{size:A4;margin:14mm}.toolbar{display:none}body{background:white}.resume{max-width:none;margin:0;padding:0;box-shadow:none}.resume section{break-inside:avoid}.resume h1{font-size:28px}.resume p{font-size:11px}}
+
+img, video, canvas, svg, iframe, embed, object { max-width: 100%; }
+img, video, canvas, svg { height: auto; }
+
+@media screen and (max-width: 850px) {
+  body { font-size: 16px; }
+  .resume p, .contact, .entry-top, .entry-top span, .resume footer,
+  .resume h2, .hint { font-size: 16px !important; }
+  .toolbar { gap: 12px; flex-wrap: wrap; }
+  .toolbar a, .toolbar button, .contact a {
+    display: inline-flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .toolbar button { font: inherit; font-weight: 700; }
+  .resume { overflow-wrap: anywhere; }
+  .resume-header > *, .entry-top > * { min-width: 0; }
+  .entry-top { flex-wrap: wrap; }
+  .entry-top span { white-space: normal; }
+  .contact a { max-width: 100%; overflow-wrap: anywhere; }
+}
+
+@media screen and (max-width: 850px) {
+  .resume a { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; max-width: 100%; overflow-wrap: anywhere; }
+}
+
+/* Match the portfolio on screen while keeping the PDF layout clean. */
+@media screen {
+  body { background: #f6f6ef; color: #354c40; }
+  .toolbar a, .resume h2, .headline { color: #173f32; }
+  .toolbar button { background: #173f32; }
+  .resume { background: #fbfbf7; box-shadow: 0 12px 45px #173f3210; border: 1px solid #173f3226; }
+  .resume h1 { color: #173f32; }
+  .resume-header { border-color: #173f32; }
+  .resume a { color: #173f32; }
+}
